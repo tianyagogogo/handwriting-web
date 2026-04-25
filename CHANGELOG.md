@@ -1,3 +1,45 @@
+# [1.26.0](https://github.com/14790897/handwriting-web/compare/v1.25.2...v1.26.0) (2026-04-25)
+
+
+### Features
+
+* integrate PWA support with Workbox and remove legacy service worker ([fc83a58](https://github.com/14790897/handwriting-web/commit/fc83a58261337622e558a33818e5877401381414))
+
+## [1.25.2](https://github.com/14790897/handwriting-web/compare/v1.25.1...v1.25.2) (2026-04-24)
+
+
+### Bug Fixes
+
+* update URLs to point to the new domain for the handwriting generation site ([e761196](https://github.com/14790897/handwriting-web/commit/e7611969ec86a0bbf86c2ec2c15ea37cb9814634))
+
+## [1.25.1](https://github.com/14790897/handwriting-web/compare/v1.25.0...v1.25.1) (2026-04-22)
+
+
+### Bug Fixes
+
+* ensure SPA entry file is not cached for latest resource indexing ([9c7e02e](https://github.com/14790897/handwriting-web/commit/9c7e02e46cafc16ead85219233155db927309210))
+
+# [1.25.0](https://github.com/14790897/handwriting-web/compare/v1.24.0...v1.25.0) (2026-04-22)
+
+
+### Features
+
+* add axios-retry for automatic request retries on network errors ([6298968](https://github.com/14790897/handwriting-web/commit/6298968593935f8a0fbdc81524893e5e18fef214))
+
+# [1.24.0](https://github.com/14790897/handwriting-web/compare/v1.23.0...v1.24.0) (2026-04-21)
+
+
+### Features
+
+* add conditional rendering for preview header based on image availability ([fc83555](https://github.com/14790897/handwriting-web/commit/fc83555ddac9068019568d458756b55107cd6ab9))
+
+# [1.23.0](https://github.com/14790897/handwriting-web/compare/v1.22.0...v1.23.0) (2026-04-21)
+
+
+### Features
+
+* replace alert messages with Swal toast notifications for improved user experience ([23f3427](https://github.com/14790897/handwriting-web/commit/23f34279cf0f0329ba45a2d328a9e31f0e69a7a5))
+
 # [1.22.0](https://github.com/14790897/handwriting-web/compare/v1.21.1...v1.22.0) (2026-04-21)
 
 
