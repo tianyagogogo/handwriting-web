@@ -4,7 +4,7 @@
 
 Welcome to my handwritten text generation site! This platform allows you to use existing fonts to create images that mimic handwritten text.
 
-URL: https://handwrite.14790897.xyz
+URL: https://handwrite.sixiangjia.de
 ![Alt text](image.png)
 
 ## Function
@@ -20,6 +20,25 @@ Upload your desired background image to add a personal touch to your handwriting
 ### Tunable parameters
 
 You have full control over various parameters such as margins (top, bottom, left, right) and random perturbation between characters. This allows you to fine-tune the look of your handwritten text.
+
+### Text layout markers
+
+Use standalone markers in the text input to control layout:
+
+- `---` (three or more dashes) forces the following content onto a new page.
+- Prefix a line with `>>>` to right-align it, which is useful for signatures and dates.
+
+For example:
+
+```text
+First page
+---
+Second page
+>>>Signature
+>>>July 27, 2026
+```
+
+The markers control layout and are not printed in the generated handwriting.
 
 ### Extract text from various file types
 
@@ -42,3 +61,13 @@ To add fonts, font files are placed in ttf_files in the project root directory
 ## Conclusion
 
 I hope you enjoy using my handwriting generator site to create your personalized handwriting pictures!
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=14790897%2Fhandwriting-web&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=14790897/handwriting-web&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=14790897/handwriting-web&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=14790897/handwriting-web&type=date&legend=top-left" />
+ </picture>
+</a>

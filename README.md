@@ -25,6 +25,25 @@
 
 你可以完全控制各种参数，如边距（上、下、左、右），字符间的随机扰动，笔画的旋转偏移，墨水的深度变化，涂改痕迹。这使你可以微调你的手写文字的外观。
 
+### 文本排版标记
+
+在文字输入区中，可以用独占一行的简单标记控制排版：
+
+- `---`（三个或更多短横线）从下一段开始强制分页。
+- `>>>` 放在行首，可将这一行靠右排版，适合署名和日期。
+
+例如：
+
+```text
+第一页内容
+---
+第二页内容
+>>>署名
+>>>2026 年 7 月 27 日
+```
+
+这些标记只控制排版，不会出现在生成的手写图片中。
+
 ### 从各种文件类型中提取文本
 
 我的网站可以从各种文件类型中提取文本内容（如 pdf，docs），使你能够方便地上传文本。
@@ -134,6 +153,12 @@ npm run serve
 
 我希望你喜欢使用我的手写文字生成网站来创建你的个性化手写文字图片！
 
+## 赞助方式
+
+如果这个项目对你有帮助，欢迎通过支付宝赞助支持我继续维护：
+
+![支付宝赞助](https://www.sixiangjia.de/assets/images/zhifubao.jpg)
+
 ## 随笔
 
 2024.6.13 由于昨天需要完成政治论文的手写，于是亲自体验了我的程序，发现效果确实不错，但是几个月来一直没有解决处理大量文字的时候程序没响应的问题，经过我添加日志发现，其实后端一直在生成图片，但是由于 nginx 的超时限制导致请求失败（这个在 docker 的日志中可以看到），于是我修改了外部和镜像内部的 nginx 的超时配置，但是问题仍然存在，这时我发现前端控制台中不再是 504 错误而是 524 错误，经过查询发现这是因为 cf 的超时限制是 100 秒，超过 cf 的限制而报错，解决方法是关闭小黄云不享受 cf 的保护，还有一种解决方法就是让后端不断给前端传输数据保持连接活跃。
@@ -163,9 +188,22 @@ if hasattr(background_image, 'read') and hasattr(background_image, 'filename'):
     background_image_bytes = await background_image.read()
 ```
 最后一定要记住一点点，不要相信VSCode或者任何值得相信的程序，它有时候会出错，导致我的fast API服务器无法输出日志，最好的方法就是重启
-
+### 随笔其五
+2026.4.21
+将原先首屏的大图片替换成小的webp，大大优化FCP
+![lighthouse](lighthouse.png)
 ## 待做(已完成)
 
 使用 websocket 保持连接，避免 cf 超时，并通知客户端目前生成进度
 socketio.emit('image_generated', {'image_index': i, 'image_path': image_path})
 使用队列，通知客户端目前有多少人等待，暂存请求（目前好像是直接抛弃）
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=14790897%2Fhandwriting-web&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=14790897/handwriting-web&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=14790897/handwriting-web&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=14790897/handwriting-web&type=date&legend=top-left" />
+ </picture>
+</a>
